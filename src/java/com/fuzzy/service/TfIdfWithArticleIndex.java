@@ -2,20 +2,33 @@ package com.fuzzy.service;
 
 import java.lang.String;
 import java.lang.Math;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  *
  * @author Marvin, Andrias, Daniel
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "TfIdfWithArticleIndex")
 public class TfIdfWithArticleIndex {
+        @XmlElement(name = "articleIndex")
 	private int articleIndex;
+        @XmlElement(name = "articleTfIdf")
 	private String articleTfIdf;
+        @XmlElement(name = "articleTitle")
         private String articleTitle;
+        @XmlElement(name = "articleContent")
+        private String articleContent;
 	
-	public TfIdfWithArticleIndex(int articleIndex, String articleTfIdf, String articleTitle) {
+	public TfIdfWithArticleIndex(int articleIndex, String articleTfIdf, String articleTitle, String articleContent) {
 		this.articleIndex = articleIndex;
 		this.articleTfIdf = articleTfIdf;
                 this.articleTitle = articleTitle;
+                this.articleContent = articleContent;
 	}
 
 	public int getArticleIndex() {
@@ -30,6 +43,10 @@ public class TfIdfWithArticleIndex {
         
         public String getArticleTitle(){
             return this.articleTitle;
+        }
+        
+        public String getArticleContent(){
+            return this.articleContent;
         }
 
 	private double convertStringToDouble(String str) {
