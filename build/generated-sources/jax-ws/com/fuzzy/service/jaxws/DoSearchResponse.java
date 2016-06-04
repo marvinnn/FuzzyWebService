@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import com.fuzzy.service.TfIdfWithArticleIndex;
 
 @XmlRootElement(name = "doSearchResponse", namespace = "http://service.fuzzy.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -14,14 +15,14 @@ import javax.xml.bind.annotation.XmlType;
 public class DoSearchResponse {
 
     @XmlElement(name = "return", namespace = "")
-    private List<String> _return;
+    private List<TfIdfWithArticleIndex> _return;
 
     /**
      * 
      * @return
-     *     returns List<String>
+     *     returns List<TfIdfWithArticleIndex>
      */
-    public List<String> getReturn() {
+    public List<TfIdfWithArticleIndex> getReturn() {
         return this._return;
     }
 
@@ -30,7 +31,7 @@ public class DoSearchResponse {
      * @param _return
      *     the value for the _return property
      */
-    public void setReturn(List<String> _return) {
+    public void setReturn(List<TfIdfWithArticleIndex> _return) {
         this._return = _return;
     }
 

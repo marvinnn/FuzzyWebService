@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fuzzy.service.ModifiedFuzzy;
+package com.fuzzy.service.FullRuleFuzzy;
 
 /**
  *
  * @author Marvin Zeson
  */
+import com.fuzzy.service.ModifiedFuzzy.*;
 import com.fuzzy.service.Interface.Calculator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ModifiedFuzzyCalculator implements Calculator{
+public class FullRuleCalculator implements Calculator{
 
     public double tf(List<String> doc, String term) {
         double result = 0;

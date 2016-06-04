@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fuzzy.service.ModifiedFuzzy;
+package com.fuzzy.service.FullRuleFuzzy;
 
+import com.fuzzy.service.ModifiedFuzzy.*;
 import com.fuzzy.service.Interface.MembershipFunctionFirstLevel;
 
 /**

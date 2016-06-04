@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Marvin%20Zeson/Documents/NetBeansProjects/FuzzyWebService/src/java/com/fuzzy/service/TfIdfFuzzy/TfIdfFuzzyCalculator.java</file>
+            <file>file:/C:/Users/Marvin%20Zeson/Documents/NetBeansProjects/FuzzyWebService/src/java/com/fuzzy/service/ModifiedFuzzy/ModifiedFuzzyCalculator.java</file>
             <file>file:/C:/Users/Marvin%20Zeson/Documents/NetBeansProjects/FuzzyWebService/src/java/com/fuzzy/service/FuzzyService.java</file>
+            <file>file:/C:/Users/Marvin%20Zeson/Documents/NetBeansProjects/FuzzyWebService/src/java/com/fuzzy/service/Interface/Calculator.java</file>
+            <file>file:/C:/Users/Marvin%20Zeson/Documents/NetBeansProjects/FuzzyWebService/src/java/com/fuzzy/service/ProposedFuzzy/ProposedFuzzyCalculator.java</file>
+            <file>file:/C:/Users/Marvin%20Zeson/Documents/NetBeansProjects/FuzzyWebService/src/java/com/fuzzy/service/TfIdfNonFuzzy/TfIdfCalculator.java</file>
+            <file>file:/C:/Users/Marvin%20Zeson/Documents/NetBeansProjects/FuzzyWebService/src/java/com/fuzzy/service/FullRuleFuzzy/FullRuleCalculator.java</file>
         </group>
     </open-files>
 </project-private>

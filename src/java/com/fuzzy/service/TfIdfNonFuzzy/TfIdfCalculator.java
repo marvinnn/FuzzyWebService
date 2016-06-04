@@ -30,15 +30,15 @@ public class TfIdfCalculator implements Calculator{
             }
         }
         if (n != 0) {
-            return Math.log(docs.size() / n);
+            return Math.log10(docs.size() / n);
         } else {
-            return 1;
+            return 2.8;
         }
     }
     
 
     @Override
-    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que) {
-        return tf(doc, term) * idf(docs, term);
+    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que, double idf) {
+        return tf(doc, term) * idf;
     }
 }

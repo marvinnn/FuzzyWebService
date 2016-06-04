@@ -3,23 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fuzzy.service.ModifiedFuzzy;
+package com.fuzzy.service.FullRuleFuzzy;
 
+import com.fuzzy.service.ModifiedFuzzy.*;
 import com.fuzzy.service.Interface.MembershipFunctionFirstLevel;
 
 /**
  *
  * @author Marvin Zeson
  */
-public class TfQueMembershipFunction implements MembershipFunctionFirstLevel{
+public class TfDocMembershipFunction implements MembershipFunctionFirstLevel{
     @Override
     public double veryLow(double tf){
-        if(tf >= 0.15)
+        if(tf >= 0.01)
         {
             return 0;
         }
-        else if(tf > 0 && tf < 0.15){
-            return (0.15 - tf)/0.15;
+        else if(tf > 0 && tf < 0.01){
+            return (0.01 - tf)/0.01;
         }
         else{
             return 1;
@@ -27,14 +28,14 @@ public class TfQueMembershipFunction implements MembershipFunctionFirstLevel{
     }
     @Override
     public double low(double tf){
-        if(tf <= 0.1 || tf >= 0.3){
+        if(tf <= 0.005 || tf >= 0.02){
             return 0;
         }
-        else if(tf > 0.1 && tf <= 0.2){
-            return (tf-0.1)/0.1;
+        else if(tf > 0.005 && tf <= 0.0125){
+            return (tf-0.005)/0.0075;
         }
-        else if(tf >= 0.2 && tf <0.3){
-            return (0.3-tf)/0.1;
+        else if(tf >= 0.0125 && tf <0.02){
+            return (0.2-tf)/0.0075;
         }
         else{
             return 1;
@@ -42,14 +43,14 @@ public class TfQueMembershipFunction implements MembershipFunctionFirstLevel{
     }
     @Override
     public double medium(double tf){
-        if(tf <= 0.25 || tf >= 0.45){
+        if(tf <= 0.015 || tf >= 0.075){
             return 0;
         }
-        else if(tf > 0.25 && tf <= 0.35){
-            return (tf-0.25)/0.1;
+        else if(tf > 0.015 && tf <= 0.045){
+            return (tf-0.015)/0.03;
         }
-        else if(tf >= 0.35 && tf < 0.45){
-            return (0.45-tf)/0.1;
+        else if(tf >= 0.045 && tf < 0.075){
+            return (0.075-tf)/0.03;
         }
         else{
             return 1;
@@ -57,14 +58,14 @@ public class TfQueMembershipFunction implements MembershipFunctionFirstLevel{
     }
     @Override
     public double high(double tf){
-        if(tf <= 0.4 || tf >= 0.6){
+        if(tf <= 0.06 || tf >= 0.12){
             return 0;
         }
-        else if(tf > 0.4 && tf <= 0.5){
-            return (tf-0.4)/0.1;
+        else if(tf > 0.06 && tf <= 0.09){
+            return (tf-0.06)/0.03;
         }
-        else if(tf >= 0.5 && tf < 0.6){
-            return (0.6-tf)/0.1;
+        else if(tf >= 0.09 && tf < 0.12){
+            return (1.2-tf)/0.03;
         }
         else{
             return 1;
@@ -72,11 +73,11 @@ public class TfQueMembershipFunction implements MembershipFunctionFirstLevel{
     }
     @Override
     public double veryHigh(double tf){
-        if(tf <= 0.55){
+        if(tf <= 0.1){
             return 0;
         }
-        else if(tf > 0.55 && tf < 1){
-            return (tf-0.55)/0.45;
+        else if(tf > 0.1 && tf < 1){
+            return (tf-0.1)/0.9;
         }
         else if(tf >= 1){
             return 1;

@@ -12,10 +12,14 @@
   <message name="doSearchResponse">
     <part name="parameters" element="tns:doSearchResponse"/>
   </message>
+  <message name="JAXBException">
+    <part name="fault" element="tns:JAXBException"/>
+  </message>
   <portType name="FuzzyService">
     <operation name="doSearch">
       <input wsam:Action="http://service.fuzzy.com/FuzzyService/doSearchRequest" message="tns:doSearch"/>
       <output wsam:Action="http://service.fuzzy.com/FuzzyService/doSearchResponse" message="tns:doSearchResponse"/>
+      <fault message="tns:JAXBException" name="JAXBException" wsam:Action="http://service.fuzzy.com/FuzzyService/doSearch/Fault/JAXBException"/>
     </operation>
   </portType>
   <binding name="FuzzyServicePortBinding" type="tns:FuzzyService">
@@ -28,6 +32,9 @@
       <output>
         <soap:body use="literal"/>
       </output>
+      <fault name="JAXBException">
+        <soap:fault name="JAXBException" use="literal"/>
+      </fault>
     </operation>
   </binding>
   <service name="FuzzyService">

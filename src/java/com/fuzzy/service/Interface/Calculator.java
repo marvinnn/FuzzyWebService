@@ -12,5 +12,5 @@ import java.util.List;
  * @author Marvin Zeson
  */
 public interface Calculator {
-    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que);
+    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que, double idf);
 }

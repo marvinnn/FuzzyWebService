@@ -130,7 +130,7 @@ public class TfIdfFuzzyCalculator implements Calculator{
             }
         }
         if (n != 0) {
-            return Math.log(docs.size() / n);
+            return Math.log10(docs.size() / n);
         } else {
             return 2.8;
         }
@@ -141,11 +141,11 @@ public class TfIdfFuzzyCalculator implements Calculator{
     }
 
     @Override
-    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que) {
+    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que, double idfs) {
         //return tf(doc, term) * idf(docs, term);
         double tfDoc = tf(doc, term);
         double tfQue = tf(que, term);
-        double idf = idf(docs, term);
+        double idf = idfs;
         if(tfDoc == 0.0){
             return 0;
         }

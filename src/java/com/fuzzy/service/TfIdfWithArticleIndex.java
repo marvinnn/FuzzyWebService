@@ -23,12 +23,15 @@ public class TfIdfWithArticleIndex {
         private String articleTitle;
         @XmlElement(name = "articleContent")
         private String articleContent;
+        @XmlElement(name = "articleCategory")
+        private String articleCategory;
 	
-	public TfIdfWithArticleIndex(int articleIndex, String articleTfIdf, String articleTitle, String articleContent) {
+	public TfIdfWithArticleIndex(int articleIndex, String articleTfIdf, String articleTitle, String articleContent, String articleCategory) {
 		this.articleIndex = articleIndex;
 		this.articleTfIdf = articleTfIdf;
                 this.articleTitle = articleTitle;
                 this.articleContent = articleContent;
+                this.articleCategory = articleCategory;
 	}
 
 	public int getArticleIndex() {
@@ -48,8 +51,12 @@ public class TfIdfWithArticleIndex {
         public String getArticleContent(){
             return this.articleContent;
         }
+        
+        public String getArticleCategory(){
+            return this.articleCategory;
+        }
 
-	private double convertStringToDouble(String str) {
+	public double convertStringToDouble(String str) {
 		int tanda = 0;
 		int indexTitik = 0;
 		boolean status = false;

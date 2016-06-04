@@ -140,11 +140,11 @@ public class ProposedFuzzyCalculator implements Calculator{
         return 1/Math.sqrt(doc.size());
     }
 
-    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que) {
+    public double calculate(List<String> doc, List<List<String>> docs, String term, List<String> que, double idfs) {
         //return tf(doc, term) * idf(docs, term);
         double tfDoc = tf(doc, term);
         double tfQue = tf(que, term);
-        double idf = idf(docs, term);
+        double idf = idfs;
         if(tfDoc == 0.0){
             return 0;
         }
